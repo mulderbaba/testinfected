@@ -1,4 +1,4 @@
 testinfected
 ============
 
-All the stuff that is related my testinfected session
+All the stuff that is related AnkaraJUG TestInfected session
