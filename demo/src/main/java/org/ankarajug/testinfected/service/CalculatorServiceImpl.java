@@ -29,6 +29,15 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     @Transactional
+    public CalculationResult substract(double a, double b) {
+        CalculationResult result = new CalculationResultBuilder().action(Action.ADD).result(a - b).build();
+        dao.save(result);
+
+        return result;
+    }
+
+    @Override
+    @Transactional
     public CalculationResult multiply(double a, double b) {
         CalculationResult result = new CalculationResultBuilder().action(Action.MULTIPLY).result(a * b).build();
         dao.save(result);

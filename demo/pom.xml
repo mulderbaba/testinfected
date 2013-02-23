@@ -35,6 +35,8 @@
         <hsqldb.version>2.2.9</hsqldb.version>
 
         <jetty.maven.plugin.version>8.1.0.RC4</jetty.maven.plugin.version>
+        <maven.surefire.plugin.version>2.9</maven.surefire.plugin.version>
+        <maven.failsafe.plugin.version>2.9</maven.failsafe.plugin.version>
     </properties>
 
     <build>
@@ -52,6 +54,34 @@
                     <stopPort>9966</stopPort>
                     <stopKey>foo</stopKey>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <runOrder>alphabetical</runOrder>
+                </configuration>
+            </plugin>
+
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven.failsafe.plugin.version}</version>
+                <configuration>
+                    <failIfNoTests>true</failIfNoTests>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

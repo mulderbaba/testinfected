@@ -10,6 +10,8 @@ public interface CalculatorService {
 
     CalculationResult add(double a, double b);
 
+    CalculationResult substract(double a, double b);
+
     CalculationResult multiply(double a, double b);
 
     CalculationResult divide(double a, double b);

@@ -12,6 +12,8 @@ import javax.persistence.*;
 public class CalculationResult {
 
     private Long id;
+    private double param1;
+    private double param2;
     private Action action;
     private Double result;
 
@@ -22,6 +24,26 @@ public class CalculationResult {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public double getParam1() {
+        return param1;
+    }
+
+    public void setParam1(double param1) {
+        this.param1 = param1;
+    }
+
+    public double getParam2() {
+        return param2;
+    }
+
+    public void setParam2(double param2) {
+        this.param2 = param2;
+    }
+
     @Enumerated(EnumType.STRING)
     public Action getAction() {
         return action;
@@ -29,10 +51,6 @@ public class CalculationResult {
 
     public void setAction(Action action) {
         this.action = action;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Double getResult() {

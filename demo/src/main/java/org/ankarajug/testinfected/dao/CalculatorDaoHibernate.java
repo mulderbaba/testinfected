@@ -20,4 +20,9 @@ public class CalculatorDaoHibernate implements CalculatorDao {
     public void save(CalculationResult result) {
         entityManager.persist(result);
     }
+
+    @Override
+    public CalculationResult findById(CalculationResult result) {
+        return entityManager.find(CalculationResult.class, result.getId());
+    }
 }

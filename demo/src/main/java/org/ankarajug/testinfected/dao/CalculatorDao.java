@@ -9,4 +9,6 @@ import org.ankarajug.testinfected.domain.CalculationResult;
 public interface CalculatorDao {
 
     void save(CalculationResult result);
+
+    CalculationResult findById(CalculationResult result);
 }
