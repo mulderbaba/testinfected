@@ -6,6 +6,7 @@ package org.ankarajug.testinfected.domain.builder;
  */
 public enum Action {
     ADD,
+    SUBTRACT,
     MULTIPLY,
     DIVIDE;
 }

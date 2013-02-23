@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * User: mertcaliskan
  * Date: 2/8/13
@@ -21,7 +23,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     @Transactional
     public CalculationResult add(double a, double b) {
-        CalculationResult result = new CalculationResultBuilder().action(Action.ADD).result(a + b).build();
+        CalculationResult result = new CalculationResultBuilder().action(Action.ADD).param1(a).param2(b).result(a + b).build();
         dao.save(result);
 
         return result;
@@ -29,8 +31,8 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     @Transactional
-    public CalculationResult substract(double a, double b) {
-        CalculationResult result = new CalculationResultBuilder().action(Action.ADD).result(a - b).build();
+    public CalculationResult subtract(double a, double b) {
+        CalculationResult result = new CalculationResultBuilder().action(Action.SUBTRACT).param1(a).param2(b).result(a - b).build();
         dao.save(result);
 
         return result;
@@ -39,7 +41,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     @Transactional
     public CalculationResult multiply(double a, double b) {
-        CalculationResult result = new CalculationResultBuilder().action(Action.MULTIPLY).result(a * b).build();
+        CalculationResult result = new CalculationResultBuilder().action(Action.MULTIPLY).param1(a).param2(b).result(a * b).build();
         dao.save(result);
 
         return result;
@@ -48,9 +50,14 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     @Transactional
     public CalculationResult divide(double a, double b) {
-        CalculationResult result = new CalculationResultBuilder().action(Action.DIVIDE).result(a / b).build();
+        CalculationResult result = new CalculationResultBuilder().action(Action.DIVIDE).param1(a).param2(b).result(a / b).build();
         dao.save(result);
 
         return result;
+    }
+
+    @Override
+    public List<CalculationResult> getAll() {
+        return dao.getAll();
     }
 }

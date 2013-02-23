@@ -25,10 +25,10 @@ public class CalculatorWebServiceITCase extends BaseWebServiceIntegrationTestCas
     }
 
     @Test
-    public void substractOperationInvokedSuccessfullyViaWS() {
+    public void subtractOperationInvokedSuccessfullyViaWS() {
         CalculatorWebService serviceClient = createServiceClient("/calculatorWS");
 
-        CalculationResult calculationResult = serviceClient.substract(6, 1);
+        CalculationResult calculationResult = serviceClient.subtract(6, 1);
 
         assertNotNull(calculationResult);
         assertThat(calculationResult.getResult(), is(5.0));

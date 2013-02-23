@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 /**
  * User: mertcaliskan
@@ -22,7 +23,24 @@ public class CalculatorDaoHibernate implements CalculatorDao {
     }
 
     @Override
+    public void save(List<CalculationResult> resultList) {
+        for (CalculationResult result : resultList) {
+            entityManager.persist(result);
+        }
+    }
+
+    @Override
+    public void delete(CalculationResult result) {
+        entityManager.remove(result);
+    }
+
+    @Override
     public CalculationResult findById(CalculationResult result) {
         return entityManager.find(CalculationResult.class, result.getId());
+    }
+
+    @Override
+    public List<CalculationResult> getAll() {
+        return entityManager.createQuery("select cr from CalculationResult cr", CalculationResult.class).getResultList();
     }
 }

@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+    <h:form id="form" prependId="false">
+        <p:panelGrid columns="1">
+            <h:panelGroup>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Param 1" />
+                    <p:inputText value="#{doTheMathBean.param1}" />
+
+                    <p:outputLabel value="Param 2" />
+                    <p:inputText value="#{doTheMathBean.param2}" />
+                </p:panelGrid>
+                <p:commandButton action="#{doTheMathBean.add}" value="+" update="table" />
+                <p:commandButton action="#{doTheMathBean.subtract}" value="-" update="table" />
+                <p:commandButton action="#{doTheMathBean.multiply}" value="*" update="table" />
+                <p:commandButton action="#{doTheMathBean.divide}" value="/" update="table" />
+            </h:panelGroup>
+
+            <p:dataTable id="table" value="#{doTheMathBean.results}" var="result" style="width:600px">
+                <f:facet name="header">
+                    All Calculation Results
+                </f:facet>
+                <p:column headerText="Param 1">
+                    <h:outputText value="#{result.param1}" />
+                </p:column>
+                <p:column headerText="Param 2">
+                    <h:outputText value="#{result.param2}" />
+                </p:column>
+                <p:column headerText="Action">
+                    <h:outputText value="#{result.action}" />
+                </p:column>
+                <p:column headerText="Result">
+                    <h:outputText value="#{result.result}" />
+                </p:column>
+            </p:dataTable>
+        </p:panelGrid>
+    </h:form>
+</h:body>
+</html>

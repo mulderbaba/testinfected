@@ -32,8 +32,8 @@ public class CalculatorServiceImplTest {
     }
 
     @Test
-    public void substractInvokedSuccessfullyAndReturnedCalculationResult() {
-        impl.substract(6, 4);
+    public void subtractInvokedSuccessfullyAndReturnedCalculationResult() {
+        impl.subtract(6, 4);
 
         verify(dao).save(any(CalculationResult.class));
     }

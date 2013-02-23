@@ -14,7 +14,7 @@ public interface CalculatorWebService {
 
     CalculationResult add(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
 
-    CalculationResult substract(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
+    CalculationResult subtract(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
 
     CalculationResult multiply(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
 
