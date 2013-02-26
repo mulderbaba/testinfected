@@ -8,8 +8,8 @@ import org.ankarajug.testinfected.domain.CalculationResult;
  */
 public class CalculationResultBuilder {
 
-    private double param1;
-    private double param2;
+    private Integer param1;
+    private Integer param2;
     private Double result;
     private Action action;
 
@@ -23,12 +23,12 @@ public class CalculationResultBuilder {
         return calculationResult;
     }
 
-    public CalculationResultBuilder param1(double param1) {
+    public CalculationResultBuilder param1(Integer param1) {
         this.param1 = param1;
         return this;
     }
 
-    public CalculationResultBuilder param2(double param2) {
+    public CalculationResultBuilder param2(Integer param2) {
         this.param2 = param2;
         return this;
     }

@@ -56,13 +56,13 @@ public class CalculatorDaoTest extends BaseIntegrationTestCase {
 
         assertNotNull(resultList);
         assertThat(resultList.size(), is(2));
-        assertThat(resultList.get(0).getParam1(), is(1.0));
-        assertThat(resultList.get(0).getParam2(), is(2.0));
+        assertThat(resultList.get(0).getParam1(), is(1));
+        assertThat(resultList.get(0).getParam2(), is(2));
         assertThat(resultList.get(0).getResult(), is(3.0));
         assertThat(resultList.get(0).getAction(), is(Action.ADD));
 
-        assertThat(resultList.get(1).getParam1(), is(6.0));
-        assertThat(resultList.get(1).getParam2(), is(2.0));
+        assertThat(resultList.get(1).getParam1(), is(6));
+        assertThat(resultList.get(1).getParam2(), is(2));
         assertThat(resultList.get(1).getResult(), is(12.0));
         assertThat(resultList.get(1).getAction(), is(Action.DIVIDE));
     }

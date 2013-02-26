@@ -25,8 +25,8 @@ public class CalculationResultBuilderTest {
     public void calculationResultGetsBuildOK() {
         CalculationResult result = builder.param1(5).param2(4).result(9.0).action(Action.ADD).build();
 
-        assertThat(result.getParam1(), is(5.0));
-        assertThat(result.getParam2(), is(4.0));
+        assertThat(result.getParam1(), is(5));
+        assertThat(result.getParam2(), is(4));
         assertThat(result.getResult(), is(9.0));
         assertThat(result.getAction(), is(Action.ADD));
     }

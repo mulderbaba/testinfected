@@ -14,22 +14,22 @@ public class CalculatorWebServiceImpl implements CalculatorWebService {
     private CalculatorService service;
 
     @Override
-    public CalculationResult add(double a, double b) {
+    public CalculationResult add(Integer a, Integer b) {
         return service.add(a, b);
     }
 
     @Override
-    public CalculationResult subtract(double a, double b) {
+    public CalculationResult subtract(Integer a, Integer b) {
         return service.subtract(a, b);
     }
 
     @Override
-    public CalculationResult multiply(double a, double b) {
+    public CalculationResult multiply(Integer a, Integer b) {
         return service.multiply(a, b);
     }
 
     @Override
-    public CalculationResult divide(double a, double b) {
+    public CalculationResult divide(Integer a, Integer b) {
         return service.divide(a, b);
     }
 }

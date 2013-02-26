@@ -12,11 +12,11 @@ import javax.jws.WebService;
 @WebService(name = "calculatorWS")
 public interface CalculatorWebService {
 
-    CalculationResult add(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
+    CalculationResult add(@WebParam(name = "param1") Integer a, @WebParam(name = "param2") Integer b);
 
-    CalculationResult subtract(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
+    CalculationResult subtract(@WebParam(name = "param1") Integer a, @WebParam(name = "param2") Integer b);
 
-    CalculationResult multiply(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
+    CalculationResult multiply(@WebParam(name = "param1") Integer a, @WebParam(name = "param2") Integer b);
 
-    CalculationResult divide(@WebParam(name = "param1") double a, @WebParam(name = "param2") double b);
+    CalculationResult divide(@WebParam(name = "param1") Integer a, @WebParam(name = "param2") Integer b);
 }

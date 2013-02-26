@@ -11,13 +11,13 @@ import java.util.List;
  */
 public interface CalculatorService {
 
-    CalculationResult add(double a, double b);
+    CalculationResult add(Integer a, Integer b);
 
-    CalculationResult subtract(double a, double b);
+    CalculationResult subtract(Integer a, Integer b);
 
-    CalculationResult multiply(double a, double b);
+    CalculationResult multiply(Integer a, Integer b);
 
-    CalculationResult divide(double a, double b);
+    CalculationResult divide(Integer a, Integer b);
 
     List<CalculationResult> getAll();
 }

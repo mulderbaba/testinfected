@@ -12,8 +12,8 @@ import javax.persistence.*;
 public class CalculationResult {
 
     private Long id;
-    private double param1;
-    private double param2;
+    private Integer param1;
+    private Integer param2;
     private Action action;
     private Double result;
 
@@ -28,19 +28,19 @@ public class CalculationResult {
         this.id = id;
     }
 
-    public double getParam1() {
+    public Integer getParam1() {
         return param1;
     }
 
-    public void setParam1(double param1) {
+    public void setParam1(Integer param1) {
         this.param1 = param1;
     }
 
-    public double getParam2() {
+    public Integer getParam2() {
         return param2;
     }
 
-    public void setParam2(double param2) {
+    public void setParam2(Integer param2) {
         this.param2 = param2;
     }
 
