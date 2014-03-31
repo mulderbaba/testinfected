@@ -13,5 +13,4 @@ Apache CXF
 jUnit w/ Mockito and Hamcrest
 
 to install the project with Maven execute:
-
- mvn install -DtargetPlatform=TEST
+mvn install -DtargetPlatform=TEST
