@@ -14,6 +14,4 @@ jUnit w/ Mockito and Hamcrest
 
 to install the project with Maven execute:
 
-{code}
  mvn install -DtargetPlatform=TEST
- {code}
